@@ -31,6 +31,13 @@ export class TodosComponent implements OnInit {
     }
   }
 
+  export class TodosComponent implements OnInit {
+  // ...
+  deleteTodo(id: string) {
+    client.models.Todo.delete({ id })
+  }
+}
+
   createTodo() {
     try {
       client.models.Todo.create({
